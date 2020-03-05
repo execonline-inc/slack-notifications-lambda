@@ -1,0 +1,59 @@
+service: lambda-cooper-ts-boilerplate
+
+provider:
+  name: aws
+  runtime: nodejs12.13
+  tags:
+    GLOBAL-TAG1: foo
+    GLOBAL-TAG2: bar
+  stackTags:
+    RESOURCE-TAG1: my-resource
+    RESOURCE-TAG2: my-other-resource
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 's3:ListBucket'
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - Ref: ServerlessDeploymentBucket
+    - Effect: 'Allow'
+      Action:
+        - 's3:PutObject'
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - Ref: ServerlessDeploymentBucket
+            - '/*'
+
+environment:
+  EXAMPLE API_SECRET: ${ssm:nameOfAPIKey}
+functions:
+  helloEntry:
+    handler: src/handler.helloEntry
+    events:
+      - http:
+          path: helloEntry
+          method: get
+    tags:
+      TAG1: FunctionTag function-tag-value1
+      TAG2: FunctionTag2 function-tag-value1
+  helloTest:
+    handler: src/handler.helloTest
+    events:
+      - http:
+          path: helloTest
+          method: get
+custom:
+  # EXAMPLE_SECRETS: ${ssm:/aws/reference/secretsmanager/example_test/lambda/boilerplate/example_secret_key~true}
+  myStage: ${opt:stage, self:provider.stage}
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-plugin-parcel
+
+package:
+  exclude:
+    - node_modules/**

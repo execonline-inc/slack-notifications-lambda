@@ -1,0 +1,10 @@
+{
+  "input": {
+    "detail": {
+      "requestParameters": {
+        "greeter": "execonline-bot",
+        "greeting": "Hello Everyone!"
+      }
+    }
+  }
+}
