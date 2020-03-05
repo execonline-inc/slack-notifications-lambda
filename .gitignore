@@ -1,0 +1,17 @@
+# Package directories
+node_modules
+jspm_packages
+coverage
+.build
+
+# Serverless directories
+.serverless
+.dynamodb
+.env
+
+# Logging
+*.log
+
+# Other
+*.code-workspace
+.DS_Store
