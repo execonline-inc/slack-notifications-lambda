@@ -1,0 +1,67 @@
+{
+  "name": "slack-notifications-lambda",
+  "version": "1.0.0",
+  "description": "Slack notifications using from an SNS message using cooperTS",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "slackNotifierTest": "serverless invoke local --function slackNotifierTest --verbose",
+    "deploy:slackNotifierTest": "sls deploy function -f slackNotifierTest",
+    "clean": "rm -rf .serverless",
+    "test": ". ~/.nvm/nvm.sh; nvm use; jest",
+    "sls": "node --inspect-brk=9229 $(which sls)"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "slack",
+    "cooperTS"
+  ],
+  "author": "ExecOnline",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/jest": "^23.3.10",
+    "@types/lambda-tester": "^3.5.1",
+    "@types/node": "^10.12.18",
+    "aws-sdk": "^2.382.0",
+    "dtslint": "^0.6.0",
+    "jest": "^24.7.1",
+    "lambda-tester": "^3.5.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.12.1",
+    "serverless-dotenv-plugin": "^2.0.1",
+    "serverless-offline": "^3.31.3",
+    "serverless-plugin-parcel": "^0.1.1",
+    "ts-jest": "^24.0.1",
+    "typescript": "^3.4.1"
+  },
+  "dependencies": {
+    "acorn": "^7.1.1",
+    "ajaxian": "^3.0.1",
+    "ajaxios": "^1.0.2",
+    "axios": "^0.19.2",
+    "bitmovin-javascript": "^2.20.0",
+    "handlebars": "^4.7.3",
+    "jsonfile": "^5.0.0",
+    "jsonous": "^3.3.1",
+    "lodash": "^4.17.15",
+    "maybeasy": "^2.5.0",
+    "minimist": "^1.2.5",
+    "mixin-deep": "^2.0.1",
+    "safer-eval": "^1.3.6",
+    "serialize-to-js": "^3.1.1",
+    "set-value": "^3.0.1",
+    "taskarian": "^2.1.0"
+  },
+  "engines": {
+    "node": "^12.16.1",
+    "npm": "^5.6.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 100
+  }
+}

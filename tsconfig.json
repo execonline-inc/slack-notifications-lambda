@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "./.build/",
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es2017",
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true
+  },
+  "include": ["./src/"]
+}
