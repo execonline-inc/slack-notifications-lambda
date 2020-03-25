@@ -1,6 +1,9 @@
-export interface RequestParameters {
-  greeter: string;
-  greeting: string;
+export interface Messages {
+  messages: Message[];
+}
+
+export interface Message {
+  message: string
 }
 
 export interface EventObjectDecoderFailed {

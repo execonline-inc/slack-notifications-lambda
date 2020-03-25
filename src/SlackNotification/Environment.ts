@@ -2,7 +2,7 @@ import Task from 'taskarian';
 import { err, ok, Result } from 'resulty';
 import { fromNullable, Maybe } from 'maybeasy';
 
-export type EnvironmentVar = 'SUPERSECRET';
+export type EnvironmentVar = 'SLACK_CHANNEL' | 'SLACK_USER' | 'SLACK_WEBHOOK_URL';
 
 export interface MissingEnvironmentVar {
   kind: 'missing-environment-var';

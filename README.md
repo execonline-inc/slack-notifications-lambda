@@ -26,7 +26,7 @@ tsc --NoEmit
 ## Invoking the Lambda Function
 
 ```bash
-yarn run helloTest
+yarn run slackNotification
 ```
 
 ## Deploying
@@ -34,16 +34,6 @@ yarn run helloTest
 Configure your permissions so that you can deploy AWS resources (e.g. assume the serverless admin role), then
 
 ```bash
-yarn run deploy:helloTest
+yarn run deploy:slackNotification
 ```
 
-## Examples
-
-- helloEverybody: Using as input parameters inside a json input event, it outputs a greeting message.
-
-## TODO
-
-- Add More examples
-  - Decoding event from another source (AWS S3, or a thirparty API)
-  - Computation (e.g. % completion for a student online course)
-  - Using libraries (e.g. [ajaxios](https://github.com/kofno/ajaxios), [gaia](https://github.com/kofno/gaia))

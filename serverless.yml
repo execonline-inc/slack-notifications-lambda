@@ -1,4 +1,4 @@
-service: lambda-cooper-ts-boilerplate
+service: lambda-slack-notification
 
 provider:
   name: aws

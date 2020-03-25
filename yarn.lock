@@ -1060,6 +1060,19 @@ acorn@^6.0.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
+ajaxian@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/ajaxian/-/ajaxian-3.0.1.tgz#2c9c5cecb51a9334d47b9fffee23fca05c37d644"
+  integrity sha512-zKn8qqDm335zOG8K0CXU3A0YAS+JGk5JTXO3TPJHA/vE7OU8Y0duJKz81FU9SD06/8GPHURaLlOf6t5/OUq7Sw==
+  dependencies:
+    resulty latest
+    taskarian latest
+
+ajaxios@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ajaxios/-/ajaxios-1.0.1.tgz#f25aab683f055153d41be4011f26bb27f22a0223"
+  integrity sha512-C+APWmmsjuefTHjfETYq9XGypAh9n5IsammbKMuceJ6Yvh4TnTA/Fbx6Nt39B1unj3uNUxMf24qCBmq9Mt34zw==
+
 ajv@^6.5.5:
   version "6.10.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.0.tgz#90d0d54439da587cd7e843bfb7045f50bd22bdf1"
@@ -6179,6 +6192,11 @@ resulty@^2.2.0:
   resolved "https://registry.yarnpkg.com/resulty/-/resulty-2.2.0.tgz#5be6b975ba36faa4cb4753bd62ffa620b1c6edce"
   integrity sha512-hb2qC0Ad2+fcFkO4VCbhGzuj/pRs1zRpUbjxT+jinbmAhV4AiM4mJzzmbUPh3pc7GxffHggWp3IeJiXpqOPDvA==
 
+resulty@latest:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/resulty/-/resulty-3.0.0.tgz#2f852a51f18dd528f43bb7f5ae02a88eaef5bd59"
+  integrity sha512-rdAnIuIC8WMfnlqktJfZz+83djxwQwzVlXnlCRb2h0Zxqzazjp+1z9cfDVmiIWBnjhrcERw3PBK7s+YJ83f2aw==
+
 ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
@@ -6820,10 +6838,10 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-taskarian@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-2.0.2.tgz#a1d77475b067d67b22250ca6614cb9d55e65d783"
-  integrity sha512-iNaLdp4cTiCViC7UuadPrqROgNw6BdlSrbuZTe6DYVJV0CROuQ+nmQBtZkp+OocpYr9s47I1EirxsbdVfpJodA==
+taskarian@^2.1.0, taskarian@latest:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-2.1.0.tgz#f4264ed0a6c1f8e6caaef3ba36b8921c9e57822b"
+  integrity sha512-OATHkWTfCGIkP295DUxW7sh6U+rJM7yer8O1nNV72FNnFemYhTD5NNsMXB2GIHYKZukYRUfEzV5Enh81XtrSXQ==
 
 terser@^3.16.1, terser@^3.7.3:
   version "3.17.0"
