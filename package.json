@@ -38,13 +38,18 @@
     "typescript": "^3.4.1"
   },
   "dependencies": {
+    "acorn": "^7.1.1",
     "ajaxian": "^3.0.1",
     "ajaxios": "^1.0.2",
     "axios": "^0.19.2",
     "bitmovin-javascript": "^2.20.0",
+    "handlebars": "^4.7.3",
     "jsonfile": "^5.0.0",
     "jsonous": "^3.3.1",
+    "lodash": "^4.17.15",
     "maybeasy": "^2.5.0",
+    "mixin-deep": "^2.0.1",
+    "safer-eval": "^1.3.6",
     "taskarian": "^2.1.0"
   },
   "engines": {
