@@ -9,6 +9,8 @@
     "noImplicitReturns": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,

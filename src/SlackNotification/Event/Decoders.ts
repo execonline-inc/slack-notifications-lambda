@@ -1,9 +1,4 @@
-import Decoder, {
-  at,
-  field,
-  succeed,
-  string,
-  } from 'jsonous';
+import Decoder, { at, field, succeed, string } from 'jsonous';
 import { EventObjectDecoderFailed, Message } from './Types';
 
 export const eventObjectDecoderFailed = (message: string): EventObjectDecoderFailed => ({
@@ -11,6 +6,7 @@ export const eventObjectDecoderFailed = (message: string): EventObjectDecoderFai
   message,
 });
 
-export const messagesDecoder: Decoder<Message> = succeed({})
-.assign('message', field("Records", at([0, "Sns", "Message"], string)))
-  
+export const messagesDecoder: Decoder<Message> = succeed({}).assign(
+  'message',
+  field('Records', at([0, 'Sns', 'Message'], string))
+);

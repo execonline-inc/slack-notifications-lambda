@@ -30,6 +30,7 @@ yarn run slackNotifierTest
 ```
 
 This is equivalent to
+
 ```bash
 serverless invoke local --function slackNotifierTest --verbose
 ```
@@ -41,4 +42,3 @@ Configure your permissions so that you can deploy AWS resources (e.g. assume the
 ```bash
 yarn run deploy:slackNotifierTest
 ```
-

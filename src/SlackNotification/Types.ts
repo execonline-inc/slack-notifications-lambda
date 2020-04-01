@@ -1,10 +1,7 @@
 import { EventObjectDecoderFailed } from './Event/Types';
 import { MissingEnvironmentVar } from './Environment';
 import { HttpError } from 'ajaxian';
-export type HandlerFail =
-  | MissingEnvironmentVar
-  | EventObjectDecoderFailed
-  | SlackNotifierError
+export type HandlerFail = MissingEnvironmentVar | EventObjectDecoderFailed | SlackNotifierError;
 
 export type SlackNotifierError = HttpError | MessageDecoderFailed | SlackNotifierRequestFailed;
 
@@ -27,7 +24,7 @@ export interface SlackNotificationSuccess {
 
 export const slackNotifierRequestSucceded = (s: unknown): SlackNotificationSuccess => ({
   kind: 'slack-notifier-request-succeeded',
-  message: s  
+  message: s,
 });
 
 export type SlackMessage = string;
@@ -36,4 +33,3 @@ export interface MessageDecoderFailed {
   kind: 'message-decoder-failed';
   message: string;
 }
-
