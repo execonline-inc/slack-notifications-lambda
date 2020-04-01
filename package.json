@@ -1,7 +1,7 @@
 {
   "name": "slack-notifications-lambda",
   "version": "1.0.0",
-  "description": "Slack notifications using from an SNS message using cooperTS",
+  "description": "Slack notifications lambda from an SNS message using cooperTS",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
@@ -42,7 +42,6 @@
     "ajaxian": "^3.0.1",
     "ajaxios": "^1.0.2",
     "axios": "^0.19.2",
-    "bitmovin-javascript": "^2.20.0",
     "handlebars": "^4.7.3",
     "jsonfile": "^5.0.0",
     "jsonous": "^3.3.1",

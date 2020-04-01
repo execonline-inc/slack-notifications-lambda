@@ -32,7 +32,7 @@ yarn run slackNotifierTest
 This is equivalent to
 
 ```bash
-serverless invoke local --function slackNotifierTest --verbose
+tsc --NoEmit && serverless invoke local --function slackNotifierTest --verbose
 ```
 
 ## Deploying
