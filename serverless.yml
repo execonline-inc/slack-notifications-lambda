@@ -2,7 +2,7 @@ service: lambda-slack-notification
 
 provider:
   name: aws
-  runtime: nodejs12.13
+  runtime: nodejs12.x
   iamRoleStatements:
     - Effect: 'Allow'
       Action:
@@ -43,7 +43,6 @@ custom:
 plugins:
   - serverless-dotenv-plugin
   - serverless-plugin-parcel
-
-package:
-  exclude:
-    - node_modules/**
+# package:
+#   exclude:
+#     - node_modules/**

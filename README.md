@@ -39,6 +39,14 @@ tsc --NoEmit && serverless invoke local --function slackNotifierTest --verbose
 
 Configure your permissions so that you can deploy AWS resources (e.g. assume the serverless admin role), then
 
+To deploy for the first time or to deploy all functions
+
+```bash
+serverless deploy
+```
+
+To re-deploy only a single function
+
 ```bash
 yarn run deploy:slackNotifierTest
 ```
