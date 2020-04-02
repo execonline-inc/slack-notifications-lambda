@@ -1,0 +1,55 @@
+service: lambda-slack-notification
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 's3:ListBucket'
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - Ref: ServerlessDeploymentBucket
+    - Effect: 'Allow'
+      Action:
+        - 's3:PutObject'
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - Ref: ServerlessDeploymentBucket
+            - '/*'
+
+environment:
+  EXAMPLE API_SECRET: ${ssm:nameOfAPIKey}
+functions:
+  slackNotifierEntry:
+    handler: src/handler.slackNotifierEntry
+    events:
+      - http:
+          path: slackNotifierEntry
+          method: get
+      - sns:
+          arn: arn:aws:sns:us-east-1:581790362895:p3-staging-build-failure-event
+  slackNotifierTest:
+    handler: src/handler.slackNotifierTest
+    events:
+      - http:
+          path: slackNotifierTest
+          method: get
+custom:
+  parcel:
+    target: node
+    cache: false
+    bundleNodeModules: true
+    detailedReport: false
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-plugin-parcel
+
+package:
+  exclude:
+    - node_modules/**
