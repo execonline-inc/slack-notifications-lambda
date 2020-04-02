@@ -27,6 +27,7 @@ tsc --NoEmit
 
 ```bash
 yarn run slackNotifierTest
+yarn run slackNotifierEntry
 ```
 
 This is equivalent to
@@ -48,5 +49,5 @@ serverless deploy
 To re-deploy only a single function
 
 ```bash
-yarn run deploy:slackNotifierTest
+yarn run deploy:slackNotifierEntry
 ```

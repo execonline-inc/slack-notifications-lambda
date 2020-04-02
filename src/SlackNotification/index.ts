@@ -6,7 +6,7 @@ import {
   SlackNotifierRequestFailed,
   SlackNotificationSuccess,
 } from './Types';
-import { readVarT } from './Environment';
+import { readVarT } from '@execonline-inc/environment';
 import { Message } from './Event/Types';
 import { sendSlackMessages } from './SendSlackMessage';
 

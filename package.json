@@ -38,6 +38,7 @@
     "typescript": "^3.4.1"
   },
   "dependencies": {
+    "@execonline-inc/environment": "^1.0.2",
     "acorn": "^7.1.1",
     "ajaxian": "^3.0.1",
     "ajaxios": "^1.0.2",
