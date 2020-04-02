@@ -19,7 +19,10 @@ export interface SlackMessage {
 
 export const slackNotification = (event: unknown): Task<HandlerFail, SuccessLambdaResult> =>
   Task.succeed<HandlerFail, {}>({})
-    .assign('message', decodeEventObject(event) as Task<HandlerFail, Message>)
+    .assign(
+      'message',
+      decodeEventObject(event).mapError<HandlerFail>(e => e)
+    )
     .assign('slackChannel', readVarT('SLACK_CHANNEL'))
     .assign('slackUser', readVarT('SLACK_USER'))
     .assign('slackWebhookUrl', readVarT('SLACK_WEBHOOK_URL'))
