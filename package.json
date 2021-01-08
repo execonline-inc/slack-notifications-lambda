@@ -42,7 +42,7 @@
     "acorn": "^7.1.1",
     "ajaxian": "^3.0.1",
     "ajaxios": "^1.0.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "handlebars": "^4.7.3",
     "jsonfile": "^5.0.0",
     "jsonous": "^3.3.1",
