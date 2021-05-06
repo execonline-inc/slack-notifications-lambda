@@ -1,7 +1,8 @@
-import { EventObjectDecoderFailed } from './Event/Types';
-import { MissingEnvironmentVar } from './Environment';
+import { MissingVarError } from '@execonline-inc/environment';
 import { HttpError } from 'ajaxian';
-export type HandlerFail = MissingEnvironmentVar | EventObjectDecoderFailed | SlackNotifierError;
+import { EventObjectDecoderFailed } from './Event/Types';
+
+export type HandlerFail = MissingVarError | EventObjectDecoderFailed | SlackNotifierError;
 
 export type SlackNotifierError = HttpError | MessageDecoderFailed | SlackNotifierRequestFailed;
 

@@ -10,19 +10,19 @@
     d "1"
     es5-ext "^0.10.47"
 
-"@execonline-inc/environment@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-1.0.2.tgz#2ae93cf705023e6b770afead09c1a11bd6a8483f"
-  integrity sha512-07eoD9iwwyIJaO7Cx/CYNvUgxcRoFPnOHnulaVVuL+CcOTwvzUmB0K8jwARCXPjR7yigiogP20u0bGQCUpefMQ==
+"@execonline-inc/environment@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-4.0.0.tgz#d523b0b194d41e3ecf14599749e9f001645ce81f"
+  integrity sha512-kQSw+rUdmYkB84bNLcOIecSneD8g0cVGeD/uZkwCx7n9aYhh+GxNRAgaM6LroSkl6y+T0Etbrg2TVooF0T/IBg==
   dependencies:
     "@kofno/piper" "^1.2.0"
     ajaxian "^3.0.1"
     honeybadger-js "^2.0.0"
-    jsonous "^5.0.1"
+    jsonous "^5.2"
     logging "^3.2.0"
     maybeasy "^2.6.0"
     resulty "^3.0.0"
-    taskarian "^2.1.0"
+    taskarian "3.0.0"
 
 "@hapi/accept@^3.2.4":
   version "3.2.4"
@@ -3452,16 +3452,7 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jsonous@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.0.1.tgz#4a0589a518292d4b48518b7440dda1d0f99f5125"
-  integrity sha512-RzZccEoUj1Sg2U84I7T1Jih8HspfAhxUV25FlCyG4lfd9cLPpt7WckLxd3fkoJPQRK0I9r2fM0K9dcQZgc4/ew==
-  dependencies:
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
-    weakset "^1.0.0"
-
-jsonous@^5.1.0:
+jsonous@^5.1.0, jsonous@^5.2:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.2.0.tgz#206d04ae0ea76001a4c313d6241ce550b7cff22e"
   integrity sha512-GkWqc24vIKdi/4hWaT+3AcLje6DYFug4rOl1MrkLK2xa3qRYV3gGMfX/CVlswiRo2gda1Dkzb2tkni4WeF2PoQ==
@@ -5468,17 +5459,17 @@ tar@^6.1.0:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-taskarian@^2.1.0, taskarian@latest:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-2.1.0.tgz#f4264ed0a6c1f8e6caaef3ba36b8921c9e57822b"
-  integrity sha512-OATHkWTfCGIkP295DUxW7sh6U+rJM7yer8O1nNV72FNnFemYhTD5NNsMXB2GIHYKZukYRUfEzV5Enh81XtrSXQ==
-
-taskarian@^3.0.0:
+taskarian@3.0.0, taskarian@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-3.0.0.tgz#a209c00594b48243229116f526d5f820feb9f3de"
   integrity sha512-BOmlfeNUmsNuCL05gjfROSVAk5i4ZgqEG+1wEJ1/JG/t9yOkTK8WxUKv2qEL7lhNjMqEbyuQ8SqlO8Ky9VMdDg==
   dependencies:
     resulty "^3.0.0"
+
+taskarian@latest:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-2.1.0.tgz#f4264ed0a6c1f8e6caaef3ba36b8921c9e57822b"
+  integrity sha512-OATHkWTfCGIkP295DUxW7sh6U+rJM7yer8O1nNV72FNnFemYhTD5NNsMXB2GIHYKZukYRUfEzV5Enh81XtrSXQ==
 
 text-hex@1.0.x:
   version "1.0.0"
@@ -5620,9 +5611,9 @@ typedarray-to-buffer@^3.1.5:
     is-typedarray "^1.0.0"
 
 typescript@^3.4.1:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
-  integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
+  version "3.9.9"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.9.tgz#e69905c54bc0681d0518bd4d587cc6f2d0b1a674"
+  integrity sha512-kdMjTiekY+z/ubJCATUPlRDl39vXYiMV9iyeMuEuXZh2we6zz80uovNN2WlAxmmdE/Z/YQe+EbOEXB5RHEED3w==
 
 uglify-js@^3.1.4:
   version "3.5.10"
