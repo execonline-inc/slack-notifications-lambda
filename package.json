@@ -1,6 +1,6 @@
 {
   "name": "slack-notifications-lambda",
-  "version": "1.1.0",
+  "version": "1.0.1",
   "description": "Slack notifications lambda from an SNS message using cooperTS",
   "main": "./.build/handler.js",
   "scripts": {
