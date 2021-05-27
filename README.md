@@ -15,7 +15,7 @@ Put a message on an SNS queue and this lambda will post it to slack. Built with 
 yarn install
 ```
 
-### Compiling
+### Building
 
 ```bash
 yarn run build
@@ -30,7 +30,7 @@ yarn run slackNotifierTest
 This is equivalent to
 
 ```bash
-tsc --NoEmit && serverless invoke local --function slackNotifierTest --verbose
+yarn run build && serverless invoke local --function slackNotifierTest
 ```
 
 ## Deploying
