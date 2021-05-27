@@ -1,15 +1,14 @@
 {
   "name": "slack-notifications-lambda",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Slack notifications lambda from an SNS message using cooperTS",
-  "main": "src/index.ts",
+  "main": "./.build/handler.js",
   "scripts": {
-    "build": "tsc",
+    "build": "parcel build src/handler.ts",
     "check": "tsc --noEmit",
-    "slackNotifierTest": "serverless invoke local --function slackNotifierTest --verbose",
+    "slackNotifierTest": "yarn run build && serverless invoke local --function slackNotifierTest",
     "deploy:slackNotifierTest": "sls deploy function -f slackNotifierTest",
     "clean": "rm -rf .serverless",
-    "test": ". ~/.nvm/nvm.sh; nvm use; jest",
     "sls": "node --inspect-brk=9229 $(which sls)"
   },
   "keywords": [
@@ -21,19 +20,17 @@
   "author": "ExecOnline",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@parcel/bundler-default": "2.0.0-beta.2",
+    "@parcel/transformer-typescript-tsc": "^2.0.0-beta.3.1",
     "@types/aws-lambda": "^8.10.17",
-    "@types/jest": "^23.3.10",
     "@types/lambda-tester": "^3.5.1",
     "@types/node": "^10.12.18",
     "aws-sdk": "^2.382.0",
     "lambda-tester": "^3.5.0",
+    "parcel": "^2.0.0-beta.3.1",
     "prettier": "^1.19.1",
-    "serverless": "^2.40.0",
-    "serverless-dotenv-plugin": "^2.0.1",
+    "serverless": "^2.43.0",
     "serverless-offline": "^7.0.0",
-    "serverless-plugin-parcel": "^0.1.1",
-    "typescript": "^3.4.1"
+    "typescript": "^4.3.2"
   },
   "dependencies": {
     "@execonline-inc/environment": "^4.0.0",

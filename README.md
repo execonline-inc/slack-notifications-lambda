@@ -4,7 +4,7 @@ Put a message on an SNS queue and this lambda will post it to slack. Built with 
 
 ## Prerequisites
 
-- Node.js v12.16.1
+- Node.js v14.9.0
 
 ## Development
 
@@ -12,22 +12,19 @@ Put a message on an SNS queue and this lambda will post it to slack. Built with 
 - Make a copy of .env.sample, edit and include environment variables
 
 ```bash
-npm install -g serverless
-
-yarn
+yarn install
 ```
 
 ### Compiling
 
 ```bash
-tsc --NoEmit
+yarn run build
 ```
 
 ## Invoking the Lambda Function
 
 ```bash
 yarn run slackNotifierTest
-yarn run slackNotifierEntry
 ```
 
 This is equivalent to
