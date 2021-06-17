@@ -2,7 +2,7 @@ service: lambda-slack-notification
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   iamRoleStatements:
     - Effect: 'Allow'
       Action:
@@ -21,12 +21,12 @@ provider:
           - - 'arn:aws:s3:::'
             - Ref: ServerlessDeploymentBucket
             - '/*'
-
+useDotenv: true
 environment:
   EXAMPLE API_SECRET: ${ssm:nameOfAPIKey}
 functions:
   slackNotifierEntry:
-    handler: src/handler.slackNotifierEntry
+    handler: .build/handler.slackNotifierEntry
     events:
       - http:
           path: slackNotifierEntry
@@ -34,21 +34,11 @@ functions:
       - sns:
           arn: arn:aws:sns:us-east-1:581790362895:p3-staging-build-failure-event
   slackNotifierTest:
-    handler: src/handler.slackNotifierTest
+    handler: .build/handler.slackNotifierTest
     events:
       - http:
           path: slackNotifierTest
           method: get
-custom:
-  parcel:
-    target: node
-    cache: false
-    bundleNodeModules: true
-    detailedReport: false
-
-plugins:
-  - serverless-dotenv-plugin
-  - serverless-plugin-parcel
 
 package:
   exclude:
