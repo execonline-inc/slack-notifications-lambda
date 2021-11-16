@@ -25,7 +25,7 @@
     "@types/jest": "^23.3.10",
     "@types/lambda-tester": "^3.5.1",
     "@types/node": "^10.12.18",
-    "aws-sdk": "^2.382.0",
+    "aws-sdk": "^2.814.0",
     "dtslint": "^0.6.0",
     "jest": "^24.7.1",
     "lambda-tester": "^3.5.0",
